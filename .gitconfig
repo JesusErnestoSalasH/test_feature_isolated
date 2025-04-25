@@ -1,2 +1,2 @@
 [alias]
-  check-merge = "!f() { git fetch upstream && git checkout master && git reset --hard upstream/master && git merge --no-commit --no-ff \"$1\" && echo '✅ Sin conflictos' || echo '❌ Hay conflictos'; git merge --abort; }; f"
+  check-merge = "!git fetch upstream && git checkout master && git reset --hard upstream/master && git merge --no-commit --no-ff \"$1\" && echo '✅ Sin conflictos' || echo '❌ Hay conflictos' && git merge --abort"
